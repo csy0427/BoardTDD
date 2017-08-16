@@ -3,11 +3,6 @@ import java.util.*;
 
 public class IOManager {
     Scanner input= new Scanner(System.in);
-    BoardManager bm=new BoardManager();
-    List<String> comments=new ArrayList<>();
-
-    Map<String,Map<String,String>> list;
-    List<String> boardnumber;
 
     public  void PrintFirst(){
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -17,7 +12,7 @@ public class IOManager {
         System.out.println("4. 게시판 수정");
         System.out.println("5. 게시판 삭제");
         System.out.println("6. 댓글 달기");
-        System.out.println("7.exit.....(가지마....)");
+        System.out.println("7. exit.....");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         System.out.println("Enter the number you want (1-7)");
