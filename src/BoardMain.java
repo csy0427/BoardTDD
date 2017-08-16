@@ -25,7 +25,7 @@ public class BoardMain {
         list= bm.getBoardList();
         boardnumber=bm.getBoardNumber();
 
-        IOManager io= new IOManager(list,boardnumber);
+        IOManager io= new IOManager();
         GetFunc gf=new GetFunc(list,boardnumber);
         while(true) {
             io.PrintFirst();
@@ -36,7 +36,6 @@ public class BoardMain {
                 continue;
             }
             //다형성을 이용한 switch문 제거
-            //mm.checkNumber(bf[choice-1],io);
             mm.checkNumber(bf[choice-1],gf);
         }
     }
