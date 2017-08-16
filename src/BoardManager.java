@@ -28,9 +28,7 @@ public class BoardManager {
         board.deletePost(key);
     }
 
-    public Map<String,String> getBoardPost(String key) {
-         return board.getPost(key);
-    }
+    public Map<String,String> getBoardPost(String key) { return board.getPost(key);}
 
     public int getPostNumber(){
         return board.getTotal_number();
