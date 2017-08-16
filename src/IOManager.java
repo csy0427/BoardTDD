@@ -1,10 +1,10 @@
-import java.util.*;
+import java.util.Scanner;
 
 
 public class IOManager {
-    Scanner input= new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
-    public  void PrintFirst(){
+    public void PrintFirst() {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("1. 게시판 리스트");
         System.out.println("2. 게시판 읽기");
