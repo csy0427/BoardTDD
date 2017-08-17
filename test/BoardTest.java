@@ -22,7 +22,7 @@ public class BoardTest {
         key[0] = bm.addPost(title[0], content[0]);
         tmp_map = new HashMap<>();
         tmp_map = bm.getBoardPost(key[0]);
-        totalSize = 1;
+        totalSize++;
     }
 
     @Test
@@ -40,7 +40,7 @@ public class BoardTest {
         assertEquals(content[0], tmp.get("content"));
 
         //잘못된 게시판 번호 입력
-        bm.getBoardPost("123");
+        fault();
     }
 
     @Test(expected = NullPointerException.class)
@@ -50,7 +50,7 @@ public class BoardTest {
         assertEquals("def", bm.getBoardPost(key[0]).get("content"));
 
         //잘못된 게시판 번호 입력
-        bm.getBoardPost("123");
+        fault();
     }
 
     @Test(expected = NullPointerException.class)
@@ -59,8 +59,9 @@ public class BoardTest {
         bm.deletePost(key[0]);
         assertEquals(0, bm.getPostNumber());
         totalSize--;
+
         //잘못된 게시판 번호 입력
-        bm.getBoardPost("123");
+        fault();
     }
 
     @Test(expected = NullPointerException.class)
@@ -70,7 +71,7 @@ public class BoardTest {
         assertEquals("2", tmp_map.get("views"));
 
         //잘못된 게시판 번호 입력
-        bm.getBoardPost("123");
+        fault();
     }
 
     @Test(expected = NullPointerException.class)
@@ -99,7 +100,12 @@ public class BoardTest {
         bm.addComment(key[0], "이 글 좋네요!");
         List<String> tmp_comment = bm.getComment(key[0]);
         assertEquals("이 글 좋네요!", tmp_comment.get(0));
+
         //예외 발생 예상 구간
+        fault();
+    }
+
+    public void fault(){
         bm.getBoardPost("123");
     }
 
