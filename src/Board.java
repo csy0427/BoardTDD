@@ -52,12 +52,7 @@ public class Board {
 
     public void deletePost(String key) {
         list.remove(key);
-        for (int i = 0; i < boardNumber.size(); i++) {
-            if (boardNumber.get(i).equals(key)) {
-                boardNumber.remove(i);
-                break;
-            }
-        }
+        boardNumber.remove(boardNumber.indexOf(key));
         totalNmber--;
     }
 
