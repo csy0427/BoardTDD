@@ -115,6 +115,7 @@ public class GetFunc {
         }
         return false;
     }
+
     public void exitBoard(){
         System.out.println("Bye........");
         System.exit(0);
