@@ -75,8 +75,7 @@ public class Board {
     }
 
     public void setComment(String key, String s) {
-        List<String> tmp_comments = comments.get(key);
-        tmp_comments.add(s);
+        comments.get(key).add(s);
     }
 
     public List<String> getComment(String key) {

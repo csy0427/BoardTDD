@@ -92,7 +92,6 @@ public class GetFunc {
     }
 
     public void addComment() {
-
         if (isEmptyPost()) return;
         PrintList();
         String id = " ";
